@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.content {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+//Стили контейнера
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding: 0 75px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 0 71px;
+    width: 1024px;
+  }
+}
+
+// Сбрасываем стили спискам
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+// Сбрасываем стили ссылкам
+a {
+  text-decoration: none;
+}
+
+//Сбрасываем паддинги и маржины абзацам и заголовкам
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0;
+  margin: 0;
+}
+
+//Стандартный стиль для рисунков
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+// Класс для скрытия контента
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+//Отключаем ресайз
+textarea {
+  resize: none;
+}

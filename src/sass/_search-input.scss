@@ -1,0 +1,89 @@
+.header__search-form {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  border-bottom: 1px solid $white-text-color;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+
+  width: 280px;
+  @media screen and (min-width: 768px) {
+    width: 336px;
+  }
+}
+
+.header__search-input {
+  border: none;
+  padding: 5px 0px 4px 0px;
+
+  font-size: 14px;
+  line-height: 1.14;
+
+  color: $white-text-color;
+
+  box-sizing: border-box;
+  outline: none;
+  background: none;
+  width: 100%;
+
+  &::placeholder {
+    font-family: Roboto;
+    font-style: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $white-text-color;
+  }
+}
+
+.header__search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  cursor: pointer;
+  margin: 0;
+
+  border: none;
+  outline: none;
+  width: 20px;
+}
+
+.header__search-icon {
+  background-image: url(../images/search.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  height: 12px;
+}
+
+.header__search-error-text {
+  margin-top: 22px;
+  position: absolute;
+  bottom: 55px;
+  left: 490px;
+  // text-align: center;
+
+  @media screen and (min-width: 320px) {
+    left: 14px;
+  }
+  @media screen and (min-width: 768px) {
+    left: 162px;
+  }
+  @media screen and (min-width: 1024px) {
+    left: 283px;
+  }
+  @media screen and (min-width: 1200px) {
+    left: 490px;
+  }
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+
+  align-items: center;
+  text-align: center;
+
+  color: $error-text-color;
+}

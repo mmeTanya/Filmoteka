@@ -1,0 +1,10 @@
+
+{{#each this}}
+<li class="slider-card" data-action='{{id}}'>
+    <div class="thumb">
+        <img class="slider-image" src="{{poster}}" alt="{{title}} {{name}}"
+            alt='{{title}}' data-src='{{id}}' />
+        <span class="rating-slider">{{vote_average}}</span>
+    </div>
+</li>
+{{/each}}

@@ -1,0 +1,29 @@
+
+{{#each this}}
+<li class="gallery__item {{genres_type}}" data-id='{{id}}' data-rate='{{vote_average}}' data-release='{{date}}'>
+   <div class="gallery__imagebox">
+         <div><span class="gallery__item__rating">{{vote_average}}</span></div>
+   <img class="gallery__image" src={{poster}} alt="{{title}}" data-src="{{id}}">
+   </div>
+   <div class="gallery__item__description">
+   <h2 class="gallery__item__title">{{title}}</h1>
+   {{!-- <div class="gallery__item__text"> --}}
+      <ul class="gallery__item__text">
+         <li class="descriptionbox__item">
+           {{!--  {{#each genres_type}} --}}
+               <span class="gallery__item__genres"> {{genres_type}}</span>
+               {{!-- <span class="symbol">,</span> --}}
+            {{!-- {{/each}} --}}
+         </li>
+         <li class="descriptionbox__item">
+            <span>|</span>
+         </li>
+         <li class="descriptionbox__item">
+            <p class="gallery__item__year">{{date}}</p>
+         </li>
+      </ul>
+   {{!-- </div> --}}
+   </div>
+</li>
+
+{{/each}}

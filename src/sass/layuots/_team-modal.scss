@@ -1,0 +1,293 @@
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+/*team-modal */
+
+.team-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 2px;
+
+  overflow: hidden;
+
+  background-color: rgba(2, 2, 2, 0.5);
+  // background-color: rgba(219, 216, 214, 0.95);
+
+  // border-radius: 20px;
+  box-shadow: 0 0 2.5rem rgba(10, 10, 9, 0.5);
+
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease 0.5s, height 0.5s ease;
+
+  z-index: 3000;
+}
+
+/* close-btn in team-modal window */
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  transition: 0.25s linear;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    width: 1.25rem;
+    height: 0.125rem;
+    background-color: white;
+  }
+
+  &:before {
+    transform: rotate(-45deg);
+  }
+
+  &:after {
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    transform: rotate(90deg);
+
+    &:before,
+    &:after {
+      background-color: $accent-color;
+    }
+  }
+}
+
+.team__title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+
+  font-size: 9px;
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+  }
+
+  color: white;
+  text-shadow: 2px 3px 2px rgba(252, 120, 47, 0.5);
+}
+
+.team-modal.is-open {
+  display: flex;
+  align-items: center;
+  height: 93%;
+  width: 85%;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 20px;
+}
+
+.team__content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 20px;
+  align-items: center;
+  max-height: 100%;
+  overflow: auto;
+}
+
+.our-team {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin: -20px;
+}
+
+/* Team-modal (Little Snippets) */
+
+.team__card {
+  // font-family: 'Open Sans', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  min-width: 200px;
+  height: 250px;
+
+  margin: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.4em;
+
+  border: 1px solid $accent-color;
+  border-radius: 20px;
+  background-color: rgba(88, 87, 87, 0.5);
+  box-shadow: 4px 4px 10px 1px #ff6b0857;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
+    box-shadow: 4px -2px 12px 2px rgba(192, 181, 190, 0.5);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.profile {
+  object-fit: cover;
+
+  border: 1px solid rgba(255, 255, 255, 0.473);
+}
+
+.team__card h3 {
+  margin: 0 0 5px;
+  font-weight: 600;
+}
+
+.team__card h3 span {
+  display: block;
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.icons i {
+  padding: 5px;
+  display: inline-block;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+}
+
+.icons a {
+  text-decoration: none;
+}
+
+.container-modal {
+  position: relative;
+  width: 240px;
+  height: 280px;
+  overflow: hidden;
+}
+.container-modal:before {
+  content: '';
+  position: absolute;
+  left: 170%;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(45deg);
+  transition: 0.8s;
+}
+.container-modal:hover:before {
+  left: -170%;
+  transition-delay: 0.8s;
+}
+.container-modal img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+  transition: 1s;
+}
+.container-modal:hover img {
+  filter: grayscale(0);
+  transform: scale(1.2);
+}
+.container-modal h2 {
+  position: absolute;
+
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  color: $accent-color;
+  bottom: 0;
+  line-height: 30px;
+  transition: 0.5s;
+  transform: perspective(300px) rotateX(90deg);
+  transform-origin: bottom;
+}
+.container-modal:hover h2 {
+  transform: perspective(300px) rotateX(0deg);
+}
+.container-modal-ul {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.container-modal-li {
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  transform: perspective(1000px) rotateY(90deg);
+  transition: 0.5s;
+  transform-origin: left;
+}
+.container-modal ul li .fa {
+  color: $accent-color;
+  font-size: 24px;
+}
+.container-modal:hover ul li {
+  transform: rotateX(0deg);
+}
+.container-modal ul li:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.container-modal ul li:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.container-modal ul li:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.container-modal ul li:nth-child(4) {
+  transition-delay: 0.8s;
+}
+
+/* _______typing_______ */
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.typing-demo {
+  width: 28ch;
+  animation: typing 2s steps(10), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+/* ___________________ */

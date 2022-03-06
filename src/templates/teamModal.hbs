@@ -1,0 +1,34 @@
+<div class='team__content'>
+    <button class='close'></button>
+
+    <div class="wrapper team__title">
+        <div class="typing-demo">
+            THE BEST TEAM EVER &#10084;
+        </div>
+    </div>
+
+    <ul class="our-team list">
+        {{#each this}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <li class='team__card our-team__item container-modal'>
+            <img src='{{photo}}' alt={{fullName}} class='profile'/>
+            <h2 class="container-modal-h2">{{firstName}} {{secondName}}<br> {{position}}</h2> 
+             
+            <ul class="container-modal-ul">
+                <li class="container-modal-li"><a href="{{linkedIn}}" title="linkedIn"><i class="fa ion-social-linkedin-outline"></i></a></li>
+                <li class="container-modal-li"><a href="{{gitHub}}" title="GitHub"><i class="fa ion-social-github-outline"></i></a></li>
+                <li class="container-modal-li"><a href="{{telegram}}" title="Telegram"><i class="fa ion-paper-airplane"></i></a></li>
+                <li class="container-modal-li"><a href="{{mail}}" title="e-mail"><i class="fa fa-envelope-o fa-fw"></i></a></li>
+            </ul>
+            
+        </li>
+
+
+    {{/each}}
+    </ul>
+
+</div>
+
+
+

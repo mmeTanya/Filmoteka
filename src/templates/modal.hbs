@@ -1,0 +1,45 @@
+<div class='card__image-thumb'>
+    <img class='card__image' src='{{poster}}' alt='{{title}}' data-src='{{id}}' />
+    <button class='modal-form__trailer' type='button' data-trailer='js-trailer-btn'>
+        <i class="fab fa-youtube fa-5x fa-cog" style="color:#FF0000;"></i>
+    </button>
+</div>
+
+<div class='card__info'>
+    <h2 class='card__name'>{{title}}</h2>
+    <ul class='card__parameters'>
+        <li class='card__parameter card__parameter--votes'>
+            <p class='parameter__label'>Vote / Votes</p>
+            <p class='parameter__value parameter__value--avg'>{{vote_average}}</p>
+            <p class='parameter__value'> / </p>
+            <p class='parameter__value parameter__value--cnt'>{{vote_count}}</p>
+        </li>
+        <li class='card__parameter'>
+            <p class='parameter__label'>Popularity</p>
+            <p class='parameter__value'>{{popularity}}</p>
+        </li>
+        <li class='card__parameter card__parameter--title'>
+            <p class='parameter__label'>Original Title</p>
+            <p class='parameter__value'>{{title}}</p>
+        </li>
+        <li class='card__parameter card__parameter--genres'>
+            <p class='parameter__label'>Genre</p>
+            <p class='parameter__value'>{{#each genres_type}}
+                <span>{{this}}</span><span class='comma'>,</span>
+                {{/each}}
+            </p>
+        </li>
+    </ul>
+    <details class='mobile-about'>
+        <summary class='mobile-about-caption'>About</summary>
+        {{overview}}
+        </details>
+        <p class='card__about-caption'>About</p>
+        <p class='card__about'>{{overview}}</p>
+        <div class='modal-form__buttons'>
+            <button class='btn modal-form__btn' type='button' id='btn-add-watched' data-lib='Watched'
+            data-textcont='ADD TO WATCHED' data-textlib='REMOVE FROM WATCHED'>add to watched</button>
+            <button class='btn modal-form__btn' type='button' id='btn-add-to-queue' data-lib='Queue'
+            data-textcont='ADD TO QUEUE' data-textlib='REMOVE FROM QUEUE'>add to queue</button>
+        </div>
+</div>

@@ -1,0 +1,73 @@
+<header class="header header__background-home" id="header">
+  <div class="container header__container">
+    <nav class="header__nav">
+      <a href="./index.html" class="header__logo">
+        <div class="header__icon"></div>
+        <div class="header__title-logo">Filmoteka</div>
+      </a>
+      <ul class="header__pages">
+        <li class="header__item">
+          <a
+            href="/index.html"
+            class="header__title header__home header__home--current"
+            id="home-link"
+            >Home</a
+          >
+        </li>
+        <li class="header__item">
+          <a href="#" class="header__title header__library" id="library-link">My library</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header__form">
+      <form class="header__search-form" id="search-form">
+        <input
+          class="header__search-input"
+          type="text"
+          name="query"
+          autocomplete="off"
+          placeholder="Movie search"
+        />
+        <button type="submit" class="header__search-btn">
+          <span class="header__search-icon"></span>
+        </button>
+      </form>
+      <div class="header__search-error is-hidden">
+        <p class="header__search-error-text">
+          Search result not successful. Enter the correct movie name and try again.
+        </p>
+      </div>
+    </div>
+    <div class="header__button disabled">
+      <button type="submit" class="header__btn" id="btn-watched">Watched</button>
+      <button type="submit" class="header__btn" id="btn-queue">Queue</button>
+    </div>
+
+    <div class="header__navigation">
+      <div class="header__sort">
+        <div class="header__drop-btn">Sort by <i class="fas fa-sort-down"></i></div>
+        <div class="header__wrapper">
+          <ul class="header__menu-bar">
+            <li class="header__rating-sort">Rating<i class="fas fa-angle-right"></i></li>
+            <li class="header__release-sort">Release date<i class="fas fa-angle-right"></i></li>
+          </ul>
+          <ul class="header__rating-item">
+            <li class="header__back-rating-btn"><i class="fas fa-chevron-left"></i>Back</li>
+            <li class="header__decrease-btn">Descending<i class="fas fa-sort-amount-down"></i></li>
+            <li class="header__increase-btn">Ascending<i class="fas fa-sort-amount-up-alt"></i></li>
+          </ul>
+          <ul class="header__release-item">
+            <li class="header__back-release-btn"><i class="fas fa-chevron-left"></i>Back</li>
+            <li class="header__desc-btn">Descending<i class="fas fa-sort-amount-down"></i></li>
+            <li class="header__asc-btn">Ascending<i class="fas fa-sort-amount-up-alt"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="header__genre">
+        <div class="filterDrop">Choose genre <i class="fas fa-sort-down"></i></div>
+        <div class="container filter-genre hideGenre"></div>
+      </div>
+    </div>
+  </div>
+</header>

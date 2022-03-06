@@ -1,0 +1,89 @@
+/* PRELOADER */
+
+.preloader {
+  position: fixed;
+  top: 50%;
+
+  left: 36%;
+
+  @media screen and (min-width: 425px) {
+    left: 40%;
+  }
+  @media screen and (min-width: 768px) {
+    left: 44%;
+  }
+  @media screen and (min-width: 1024px) {
+    top: 70%;
+    left: 46%;
+  }
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: transparent;
+}
+
+.preloader.hidden {
+  display: none;
+}
+
+.preloader.hide {
+  animation: hidePreloader 5s;
+}
+
+@keyframes hidePreloader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.spinner-box {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.pulse-container {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pulse-bubble {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $accent-color;
+}
+
+.pulse-bubble-1 {
+  animation: pulse 0.4s ease 0s infinite alternate;
+}
+.pulse-bubble-2 {
+  animation: pulse 0.4s ease 0.2s infinite alternate;
+}
+.pulse-bubble-3 {
+  animation: pulse 0.4s ease 0.4s infinite alternate;
+}
+
+/* KEYFRAMES */
+
+@keyframes pulse {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.25;
+    transform: scale(0.75);
+  }
+}

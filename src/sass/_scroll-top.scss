@@ -1,0 +1,29 @@
+.scroll-top {
+  position: fixed;
+  display: flex;
+  bottom: 20px;
+  right: 20px;
+  // overflow: hidden;
+  transition: 1s;
+  cursor: pointer;
+  opacity: 0.9;
+
+  @media screen and (min-width: 768px) {
+    bottom: 40px;
+    right: 40px;
+  }
+}
+
+.scroll-top.hide {
+  opacity: 0;
+}
+
+.fa-rocket {
+  color: $accent-color;
+  font-size: 50px;
+  transform: rotate(-45deg);
+
+  @media screen and (min-width: 768px) {
+    font-size: 60px;
+  }
+}
